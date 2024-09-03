@@ -96,7 +96,7 @@ def calculate_cfl(Q):
 
 def Roe_FDS_flux(QL, QR, E):
     """
-    Calculate Roe flux for the finite difference scheme.
+    Calculate Roe flux for the flux differencing splitting.
 
     Args:
         QL, QR (np.ndarray): Left and right states at each interface.
@@ -303,7 +303,7 @@ def apply_central_difference(Q):
 
 def Roe_FDS(Q, order, kappa, nmax, print_interval = 2):
     """
-    Perform the Roe finite difference scheme for shock propagation.
+    Perform the Roe flux differencing splitting for shock propagation.
 
     Args:
         Q (np.ndarray): State array with density, momentum, and energy.
